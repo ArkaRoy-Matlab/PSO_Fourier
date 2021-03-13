@@ -1,0 +1,28 @@
+
+% ***************************************************************
+% *** Manual for usage of Fourier_PSO.
+% *** Source Code is mainly written for research purposes. The codes are
+% *** having copyrights and required proper citations whenever it is used.
+% *** Originated by:
+% ***       Mr. Arka Roy (email: arka.phy@gmail.com)
+% ***       Dr. Chandra Prakash Dubey (email:p.dubey48@gmail.com)
+% ***       Mr. M. Prasad (email:prasadgoud333@gmail.com)
+% ***       Crustal Processes Group, National Centre for Earth Science Studies,
+% ***       Ministry of Earth Sciences, Government of India
+% ***       Thiruvanthapuram, Kerala, India
+% ****************************************************************
+
+
+A dedicated Matlab function Fourier_PSO for the inversion of any sedimentary basin from given observed gravity anomalies and density contrast, is developed such that without any programming knowledge, anyone can invert any real case study without any technical difficulties. The only input parameters that required for this function are,
+1. Location of horizontal observation points,
+2. Gravity anomalies in mGAL at these observation points,
+3. Density contrast as a function of depth.
+
+The outputs of this function are,
+1.	Data for the inverted depth profile at given observation points.
+2.	Inverted gravity anomalies at these given observation points.
+
+Along with the inverted data, two plots are also produced.
+Fourier coefficients for gravity anomalies with the marked cut-off threshold.
+The plot for observed and inverted gravity anomalies along with the depth profile. 
+An example code 'example_arbritary_basin.m' using the function 'Fourier_PSO' is also given for the practical implementation of any case study.
