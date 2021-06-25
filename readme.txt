@@ -76,8 +76,8 @@ and adaptive Fourier coefficients that can be applicable for any real sedimentar
 		h. error_energy_plot.m
 		i. parameter_tunning_c1_c2
 		j. parameter_tunning_population.m
-		k. incorrect_density_godavari
-		l. incorrect_density_sayula
+		k. incorrect_density
+		l. forward_prism
 		m. example_arbritary_basin
 	
 	a. fourier_coef_arbitary_model.m - It calculates the Fourier power spectrum plot for a arbritary model shown in Figure 4. 
@@ -100,10 +100,8 @@ and adaptive Fourier coefficients that can be applicable for any real sedimentar
 	
 	j. parameter_tunning_population.m - This code for Parameter tuning of particle population. Output of the code is shown in Table 3. 
 	
-	k. incorrect_density_godavari.m - Produce plots for inversion of depth profile for 
-Godavari basin with incorrect density distribution.
+	k. incorrect_density.m - Produce relative percent error for inversion of depth profile by incorporating 10% of error in density contrasts.
 
-	l. incorrect_density_sayula.m - Produce plots for inversion of depth profile for 
-Sayula basin with incorrect density distribution.
+	l. forward_prism.m - Produce plots for depth profile of sedimentary basins using stacked prismatic representation.
 
 	m. example_arbritary_basin - Example code for inversion of any real sedimentary basin using the dedicated function of Fourier_PSO.m. 
