@@ -15,7 +15,7 @@ clear all
 close all
 
 %%%%    Creation of Synthetic Model and finding Gravity anomaly     %%%%
-%% function for Synthetic Example of depth of the basin
+%%function for Synthetic Example of depth of the basin
 z_peaks=peaks(100);
 y_peaks=((z_peaks(71,:))+0.5)*200;
 
@@ -59,7 +59,7 @@ y_peaks=((z_peaks(71,:))+0.5)*200;
       aa_dep(j)=(1/ll)*trapz(TT,dd1);
       dd2=depth_data.*sin(j*pi*TT/ll);  
       bb_dep(j)=(1/ll)*trapz(TT,dd2);
-      vv_dep(j+1)=sqrt((aa_grv(j))^2+(bb_grv(j))^2);
+      vv_dep(j+1)=sqrt((aa_dep(j))^2+(bb_dep(j))^2);
       wn_num(j+1)=j*pi/ll;
     end
     %normalization of Fourier Coefficients of Gravity anomaly 

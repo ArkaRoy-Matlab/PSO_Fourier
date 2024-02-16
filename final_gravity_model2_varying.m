@@ -34,7 +34,7 @@ y_peaks=yy(74:200);
     zz1=poly_gravityrho(x_obs,z_obs,xx1,yy1,density,t_leg,c_leg);
     zz2=zz1;
     %adding noise to anomaly having 0 mean and sqrt(0.5) standard deviation 
-    %     zz1 = zz1+sqrt(0.25).*randn(size(zz1))+0;
+         zz1 = zz1+sqrt(0.25).*randn(size(zz1))+0;
     %for model without noise comment line 46. 
     %Fourier coefficients for Gravity anomaly
     TT=1:2*length(zz1);
@@ -57,7 +57,7 @@ y_peaks=yy(74:200);
       aa_dep(j)=(1/ll)*trapz(TT,dd1);
       dd2=depth_data.*sin(j*pi*TT/ll);  
       bb_dep(j)=(1/ll)*trapz(TT,dd2);
-      vv_dep(j+1)=sqrt((aa_grv(j))^2+(bb_grv(j))^2);
+      vv_dep(j+1)=sqrt((aa_dep(j))^2+(bb_dep(j))^2);
       wn_num(j+1)=j*pi/ll;
     end
     %normalization of Fourier Coefficients of Gravity anomaly 
@@ -93,7 +93,7 @@ data=zz1;     %data for gravity anomaly
 %correlation coefficients for Fourier spectrum of gravity anomaly and depth profile
 cc=corrcoef(vv_grv,vv_dep);
 fprintf('Correlation coefficients of power spectrum for gravity and depth profile is %f\n',cc(1,2))
-
+%%
 %%creating Fourier Transformation matrix for multiplication 
 T=1:2*length(data_x);
 l=(T(end)-T(1))/2;

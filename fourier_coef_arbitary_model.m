@@ -75,7 +75,7 @@ density=@(z)(-0.38-0.42*exp(-0.5*z*10^-3))*1000;
       aa_dep(j)=(1/ll)*trapz(TT,dd1);
       dd2=depth_data.*sin(j*pi*TT/ll);  
       bb_dep(j)=(1/ll)*trapz(TT,dd2);
-      vv_dep(j+1)=sqrt((aa_grv(j))^2+(bb_grv(j))^2);
+      vv_dep(j+1)=sqrt((aa_dep(j))^2+(bb_dep(j))^2);
       wn_num(j+1)=j*pi/ll;
     end
     %Normalized amplitude of Power spectrum for Gravity anomaly

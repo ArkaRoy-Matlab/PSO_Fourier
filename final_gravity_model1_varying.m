@@ -15,7 +15,7 @@ clear all
 close all
 
 %%%%    Creation of Synthetic Model and finding Gravity anomaly     %%%%
-%% function for Synthetic Example of depth of the basin
+%%function for Synthetic Example of depth of the basin
 z_peaks=peaks(100);
 y_peaks=((z_peaks(71,:))+0.5)*200;
 
@@ -35,7 +35,7 @@ y_peaks=((z_peaks(71,:))+0.5)*200;
     zz1=poly_gravityrho(x_obs,z_obs,xx1,yy1,density,t_leg,c_leg);
     zz2=zz1;
     %adding noise to anomaly having 0 mean and sqrt(0.5) standard deviation 
-         zz1 = zz1+sqrt(0.25).*randn(size(zz1))+0;
+    %     zz1 = zz1+sqrt(0.25).*randn(size(zz1))+0;
     %for model without noise comment line 38. 
     %Fourier coefficients for Gravity anomaly
     TT=1:2*length(zz1);
@@ -58,7 +58,7 @@ y_peaks=((z_peaks(71,:))+0.5)*200;
       aa_dep(j)=(1/ll)*trapz(TT,dd1);
       dd2=grav_data.*sin(j*pi*TT/ll);  
       bb_dep(j)=(1/ll)*trapz(TT,dd2);
-      vv_dep(j+1)=sqrt((aa_grv(j))^2+(bb_grv(j))^2);
+      vv_dep(j+1)=sqrt((aa_dep(j))^2+(bb_dep(j))^2);
       wn_num(j+1)=j*pi/ll;
     end
     %normalization of Fourier Coefficients of Gravity anomaly 

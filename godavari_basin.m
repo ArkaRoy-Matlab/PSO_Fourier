@@ -14,7 +14,7 @@
 clear all
 close all
 
-%% Gravity anomaly of Godavari Basin and depth profile from
+%%Gravity anomaly of Godavari Basin and depth profile from
 
 %t and c are Legendre Gaussian quadrature points for numerical integration
     [t_leg,c_leg]=lgwt(10,0,1); 
@@ -53,7 +53,7 @@ close all
       aa_dep(j)=(1/ll)*trapz(TT,dd1);
       dd2=grav_data.*sin(j*pi*TT/ll);  
       bb_dep(j)=(1/ll)*trapz(TT,dd2);
-      vv_dep(j+1)=sqrt((aa_grv(j))^2+(bb_grv(j))^2);
+      vv_dep(j+1)=sqrt((aa_dep(j))^2+(bb_dep(j))^2);
       wn_num(j+1)=j*pi/ll;
     end
     %normalization of Fourier Coefficients of Gravity anomaly 

@@ -102,7 +102,7 @@ function [best_var, best_cost,iter_count,error_energy,all_var,all_cost]  = WIPSO
             break
         end
         %printing the cost after each iterations 
-        %fprintf('After %d iterations Best Cost Value= %.7f\n',it,BestCost(it))  
+        fprintf('After %d iterations Best Cost Value= %.7f\n',it,BestCost(it))  
         %value for error energy plot
         error_energy(it)=(BestCost(it)).^2;
     end
